@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body,
+html{
+    min-height: 100vh;
+    min-width: 100vw;
+}
+body{
+display: flex;
+align-items: center;
+/* background-color: #191940; */
+background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: 500ms;
+    animation-name: slideDown;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+.logo img{
+    max-width: 250px;
+}
+
+.App-Retailers{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.content{
+    margin: 0 5px;
+    height: 500px;
+}
+.coming-soon h1{
+    letter-spacing: 5px;
+    color: #b81c24;
+    font-weight: 800;
+}
+
+.infoBox{
+    background-color: #ffffff;
+    width: 80vw;
+    margin: auto;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h1, p{
+    font-family: 'kanit', sans-serif;
+}
+h1{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+p{
+font-size: 20px;
+}
+
+.contact-details{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    padding: 20px 0 0 0;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        height: 700px;
+    }
+
+    .cont {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .coming-soon h1 {
+        font-size: 30px;
+    }
+}
+.contact-details li{
+    font-size: 24px;
+    list-style: none;
+    margin-right: 40px;
+}
+.contact-details li i{
+    color: #b81c24;
+    font-size: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+}
+.contacts{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contacts:hover{
+    color: #b81c24;
+}
+
+@media only screen and (max-width: 690px) {
+    .contact-details{
+        display: unset;
+    }
+    .contact-details li{
+        margin:10px 0px;
+        font-size: 20px;
+        list-style: none;
+    }
+    .App-Retailers img{
+        width: 130px;
+    }
+    .right,
+    .left{
+        text-align: center !important;
+    }
+}
+.right{
+    text-align: right;
+}
+.left{
+    text-align: left;
+}
+
+footer {
+    color: #000;
+}
+
+.footer-copyright{
+    font-family: 'kanit', sans-serif;
+    font-size: 20px;
+    color: #b81c24;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.social li {
+    height: 2rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    width: 2rem;
+}
+
+/* footer */
+.social li {
+    animation-duration: 500ms;
+    animation-name: slideUp;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+
+.social a {
+    color: #b81c24;
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+    height: 2rem;
+    
+    opacity: 0.7;
+    transition-property: opacity, transform;
+    justify-content: center;
+    width: 2rem;
+    text-decoration: none;
+}
+.social a:hover{
+    color: #b81c24;
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+.social a::before {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*delay */
+.social li:nth-child(1) {
+    animation-delay: 800ms;
+}
+
+.social li:nth-child(2) {
+    animation-delay: 900ms;
+}
+.social li:nth-child(3) {
+    animation-delay: 1000ms;
+}
+.logo{
+    animation-delay: 700ms;
+}
+
+/* keyframes */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
